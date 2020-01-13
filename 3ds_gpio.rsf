@@ -1,0 +1,83 @@
+BasicInfo:
+  Title                   : gpio
+  CompanyCode             : "00"
+  ProductCode             : lennybuilder # I'll join the lennys
+  ContentType             : Application
+  Logo                    : None
+
+TitleInfo:
+  UniqueId                : 0x1B
+  Category                : Base
+  Version                 : 2
+
+Option:
+  UseOnSD                 : false
+  FreeProductCode         : true # Removes limitations on ProductCode
+  MediaFootPadding        : false # If true CCI files are created with padding
+  EnableCrypt             : false # Enables encryption for NCCH and CIA
+  EnableCompress          : true # Compresses exefs code
+
+AccessControlInfo:
+  IdealProcessor                : 1
+  AffinityMask                  : 2
+
+  Priority                      : -12
+
+  DisableDebug                  : true
+  EnableForceDebug              : false
+  CanWriteSharedPage            : false
+  CanUsePrivilegedPriority      : false
+  CanUseNonAlphabetAndNumber    : false
+  PermitMainFunctionArgument    : false
+  CanShareDeviceMemory          : false
+  RunnableOnSleep               : true
+  SpecialMemoryArrange          : false
+  ResourceLimitCategory         : Other
+
+  CoreVersion                   : 2
+  DescVersion                   : 2
+
+  MemoryType                    : Base      # Application / System / Base
+  HandleTableSize: 0
+
+  MemoryMapping:
+    # none needed
+
+  IORegisterMapping:
+    - 0x1EC47000  # GPIO Registers
+
+  SystemCallAccess:
+    ExitProcess: 3
+    SleepThread: 10
+    CloseHandle: 35
+    ConnectToPort: 45
+    SendSyncRequest: 50
+    GetProcessId: 53
+    AcceptSession: 74
+    ReplyAndReceive: 79
+
+  InterruptNumbers:
+    - 0x60
+    - 0x63
+    - 0x64
+    - 0x66
+    - 0x68
+    - 0x69
+    - 0x6A
+    - 0x6B
+    - 0x6C
+    - 0x6D
+    - 0x6E
+    - 0x6F
+    - 0x70
+    - 0x71
+    - 0x72
+    - 0x73
+
+  ServiceAccessControl:
+  FileSystemAccess:
+
+SystemControlInfo:
+  SaveDataSize: 0KB # It doesn't use any save data.
+  RemasterVersion: 0
+  StackSize: 0x1000
