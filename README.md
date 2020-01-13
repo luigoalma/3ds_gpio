@@ -13,7 +13,7 @@ This requires game patching to be enabled on luma config.
 ## License
 
 This code itself is under Unlicense. Read `LICENSE.txt`\
-The folders `source/3ds` and `include/3ds` are source files taken from [ctrulib](https://github.com/smealum/ctrulib), with modifications for the purpose of this program.\
+The folders `source/3ds` and `include/3ds` have source files taken from [ctrulib](https://github.com/smealum/ctrulib), with modifications for the purpose of this program.\
 Copy of ctrulib's license in `LICENSE.ctrulib.txt`
 
 ## Modifications to ctrulib
