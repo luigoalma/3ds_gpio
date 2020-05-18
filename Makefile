@@ -31,6 +31,7 @@ DEFINES :=	-DARM11 -D_3DS
 CFLAGS	:=	-g -std=gnu11 -Wall -Wextra -Werror -Wno-unused-value -Os -flto -mword-relocations \
 			-fomit-frame-pointer -ffunction-sections -fdata-sections \
 			-fno-exceptions -fno-ident -fno-unwind-tables -fno-asynchronous-unwind-tables \
+			-fno-tree-loop-distribute-patterns \
 			$(ARCH) $(DEFINES)
 
 CFLAGS	+=	$(INCLUDE)
